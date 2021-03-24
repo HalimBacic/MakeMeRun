@@ -1,0 +1,8 @@
+
+
+IZVOD KLUBA NA DAN: 2020-12-07T21:40:20.216780
+        RACUN            TIP              DATUM               STANJE
+
+    2423-100-434-40-00    Kupovina opreme    2020-12-07   10
+    2423-100-434-40-00    Uplata sponzora    2020-12-07   500
+    5761-506-764-00-22    Uplata trke    2020-12-07   230

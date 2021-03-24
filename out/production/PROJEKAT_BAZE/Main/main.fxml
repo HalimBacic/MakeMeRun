@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="clanoviklubabox" cacheShape="false" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="591.0" prefWidth="936.0" scaleShape="false" style="-fx-background-image: url('file:///E:/Fakultet/Baze/PROJEKAT_BAZE/MakeMeRun/resources/running-track34.jpg');" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller">
+   <right>
+      <GridPane fx:id="gridMenu" prefHeight="465.0" prefWidth="329.0" style="-fx-opacity: 1;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnClanovi" mnemonicParsing="false" onAction="#actClanoviKluba" prefHeight="50.0" prefWidth="103.0" text="Klub">
+               <font>
+                  <Font name="Candara Bold" size="19.0" />
+               </font></Button>
+            <Button fx:id="btnKontakti" mnemonicParsing="false" onAction="#actKontakti" prefHeight="51.0" prefWidth="102.0" text="Kontakti" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Candara Bold" size="17.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#kreirajTrku" prefHeight="48.0" prefWidth="104.0" text="Trka" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Candara Bold" size="20.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#prikazUgovora" prefHeight="50.0" prefWidth="99.0" text="Ugovori" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Candara Bold" size="17.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#otvoriRacune" prefHeight="50.0" prefWidth="102.0" text="Bankovni racuni" textAlignment="RIGHT" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="btnIzlaz" mnemonicParsing="false" onAction="#exit" prefHeight="54.0" prefWidth="102.0" text="Izlaz" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Candara Bold" size="18.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+   </right>
+   <top>
+      <HBox fx:id="hbox" prefHeight="64.0" prefWidth="936.0" spacing="10.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnShow" mnemonicParsing="false" onAction="#backMe" prefHeight="37.0" prefWidth="70.0" text="Nazad">
+               <HBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="64.0" prefWidth="831.0">
+               <children>
+                  <HBox fx:id="clanoviBox" layoutX="13.0" layoutY="18.0" prefHeight="64.0" prefWidth="805.0" spacing="10.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addClanKluba" prefHeight="37.0" prefWidth="126.0" text="Dodaj clana">
+                           <font>
+                              <Font name="Candara Bold" size="14.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#deleteClanKluba" prefHeight="37.0" prefWidth="126.0" text="Obrisi clana">
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#prikaziOpremu" prefHeight="37.0" prefWidth="126.0" text="Oprema">
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#dodajOpremu" prefHeight="37.0" prefWidth="137.0" text="Dodaj opremu">
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#searchClanKluba" prefHeight="39.0" prefWidth="59.0" style="-fx-background-image: url('file:///D:/Fakultet/Baze/PROJEKAT_BAZE/MakeMeRun/resources/search.png'); -fx-background-size: cover;">
+                           <HBox.margin>
+                              <Insets left="150.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="searchField" prefHeight="36.0" prefWidth="158.0" promptText="Pretraga">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Candara" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="kontaktiBox" layoutX="13.0" layoutY="18.0" prefHeight="64.0" prefWidth="805.0" spacing="10.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#dodajKontakt" prefHeight="37.0" prefWidth="126.0" text="Dodaj kontakt">
+                           <font>
+                              <Font name="Candara Bold" size="12.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#brisiKontakt" prefHeight="37.0" prefWidth="126.0" text="Obrisi kontakt">
+                           <font>
+                              <Font name="Candara Bold" size="12.0" />
+                           </font></Button>
+                        <TextField fx:id="brisiKontaktField" prefHeight="37.0" prefWidth="176.0" promptText="Ime kontakta">
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#searchKontakt" prefHeight="40.0" prefWidth="45.0" style="-fx-background-image: url('file:///D:/Fakultet/Baze/PROJEKAT_BAZE/MakeMeRun/resources/search.png'); -fx-background-size: contain;">
+                           <HBox.margin>
+                              <Insets left="150.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="searchKontaktField" prefHeight="36.0" prefWidth="158.0" promptText="Pretraga">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="trkaBox" layoutX="6.0" layoutY="-7.0" prefHeight="89.0" prefWidth="820.0" spacing="20.0" visible="false">
+                     <children>
+                        <Button fx:id="btnTrkaBox" mnemonicParsing="false" onAction="#kreirajTrkuForm" prefHeight="36.0" prefWidth="135.0" text="Kreiraj trku">
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnAIMS" mnemonicParsing="false" onAction="#seeAIMS" prefHeight="36.0" prefWidth="135.0" text="AIMS Certifikati">
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnRedari" mnemonicParsing="false" onAction="#dodajRedaraForm" prefHeight="36.0" prefWidth="135.0" text="Redari">
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <MenuButton fx:id="pregledTrka" graphicTextGap="8.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="135.0" text="Pregled trka" textAlignment="CENTER">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <font>
+                              <Font name="Candara Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets bottom="20.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="27.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="boxRacuni" prefHeight="75.0" prefWidth="830.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#dodajRacun" prefHeight="37.0" prefWidth="142.0" text="Dodaj racun">
+                           <font>
+                              <Font name="Candara Bold" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#stampajIzvode" prefHeight="37.0" prefWidth="98.0" text="IZVOD">
+                           <font>
+                              <Font name="Candara Bold" size="16.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <MenuButton fx:id="urediRacunSplitBtn" mnemonicParsing="false" prefHeight="37.0" prefWidth="219.0" text="Uredi racun">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Candara Bold" size="18.0" />
+                           </font>
+                        </MenuButton>
+                        <Button fx:id="obrisiRacunBtn" disable="true" mnemonicParsing="false" onAction="#obrisiRacun" prefHeight="37.0" prefWidth="84.0" text="Obrisi racun">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Candara Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="urediRacunBtn" disable="true" mnemonicParsing="false" onAction="#editujStanje" prefHeight="37.0" prefWidth="77.0" text="Uredi iznos">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="racunField" disable="true" prefHeight="37.0" prefWidth="86.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <Pane fx:id="tablePane" prefHeight="436.0" prefWidth="607.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="paneClanovi" prefHeight="379.0" prefWidth="588.0" visible="false">
+               <children>
+                  <TableView fx:id="tableClanovi" layoutX="22.0" layoutY="63.0" prefHeight="200.0" prefWidth="894.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="109.0" text="ID" />
+                      <TableColumn fx:id="ime" prefWidth="169.0" text="Ime" />
+                        <TableColumn fx:id="prezime" prefWidth="197.0" text="Prezime" />
+                        <TableColumn fx:id="uloga" prefWidth="418.0" text="Uloga u klubu" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="paneTrka" layoutY="76.0" prefHeight="388.0" prefWidth="562.0" visible="false">
+               <children>
+                  <TableView fx:id="opremaTable" layoutX="109.0" layoutY="14.0" prefHeight="277.0" prefWidth="696.0">
+                    <columns>
+                      <TableColumn fx:id="proizOpremaTable" prefWidth="142.0" text="PROIZVOĐAČ" />
+                      <TableColumn fx:id="tipOpremaTable" prefWidth="168.0" text="TIP" />
+                        <TableColumn fx:id="kolicinaOpremaTable" prefWidth="169.0" text="KOLICINA" />
+                        <TableColumn fx:id="cijenaOpremaTable" prefWidth="216.0" text="CIJENA" />
+                    </columns>
+                  </TableView>
+               </children></Pane>
+            <Pane fx:id="paneRacun" layoutX="1.0" layoutY="27.0" prefHeight="464.0" prefWidth="599.0" visible="false">
+               <children>
+                  <TableView fx:id="tableRacuni" layoutX="158.0" layoutY="129.0" prefHeight="188.0" prefWidth="567.0">
+                    <columns>
+                      <TableColumn fx:id="bankaColumn" prefWidth="155.0" text="Banka" />
+                      <TableColumn fx:id="brojRacunaColumn" prefWidth="276.0" text="Broj racuna" />
+                        <TableColumn fx:id="stanjeColumn" prefWidth="136.0" text="Stanje" />
+                    </columns>
+                  </TableView>
+               </children></Pane>
+            <Pane fx:id="kontaktiPane" prefHeight="464.0" prefWidth="936.0" visible="false">
+               <children>
+                  <TableView fx:id="TableKontakt" layoutX="112.0" layoutY="42.0" prefHeight="456.0" prefWidth="706.0">
+                    <columns>
+                      <TableColumn fx:id="imeTableKontakt" prefWidth="229.0" text="Ime" />
+                      <TableColumn fx:id="opisTableKontakt" prefWidth="223.0" text="Opis" />
+                        <TableColumn fx:id="konTableKontakt" prefWidth="253.0" text="Kontakt" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="ugovorPane" prefHeight="438.0" prefWidth="886.0" visible="false">
+               <children>
+                  <TableView fx:id="ugovoriTable" layoutX="58.0" layoutY="91.0" onMouseClicked="#findUgovori" prefHeight="311.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="ugovoriColumn" prefWidth="199.0" text="UGOVORI" />
+                    </columns>
+                  </TableView>
+                  <TextArea fx:id="ugovoriArea" editable="false" layoutX="378.0" layoutY="91.0" prefHeight="310.0" prefWidth="454.0">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font></TextArea>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

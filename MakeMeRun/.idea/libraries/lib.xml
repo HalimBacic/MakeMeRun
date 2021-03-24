@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+      <root url="jar://C:/Program Files/Java/mysql-connector-java-8.0.22/mysql-connector-java-8.0.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/opencsv-5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/commons-lang3-3.11-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/commons-lang3-3.11.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/resources/commons-lang3-3.11-javadoc.jar!/" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/opencsv-5.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/commons-lang3-3.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/commons-lang3-3.11-test-sources.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" recursive="false" />
+    <jarDirectory url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>

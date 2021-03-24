@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="MakeMeRun">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MakeMeRun/out/production/MakeMeRun/commons-lang3-3.11-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MakeMeRun/out/production/MakeMeRun/commons-lang3-3.11-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MakeMeRun/out/production/MakeMeRun/commons-lang3-3.11-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MakeMeRun/out/production/MakeMeRun/opencsv-5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MakeMeRun/out/production/MakeMeRun/commons-lang3-3.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MakeMeRun/out/production/MakeMeRun/commons-lang3-3.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

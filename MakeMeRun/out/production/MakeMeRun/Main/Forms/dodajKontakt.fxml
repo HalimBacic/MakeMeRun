@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="388.0" styleClass="dialog" stylesheets="@../../Style/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Forms.DodajKontaktControl">
+   <children>
+      <Label layoutX="22.0" layoutY="20.0" text="Dodaj kontakt">
+         <font>
+            <Font name="Candara Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="imeKontaktaField" layoutX="23.0" layoutY="72.0" prefHeight="30.0" prefWidth="334.0" promptText="Ime kontakta">
+         <font>
+            <Font name="Candara Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="opisField" layoutX="23.0" layoutY="115.0" prefHeight="30.0" prefWidth="334.0" promptText="Opis">
+         <font>
+            <Font name="Candara Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="kontaktField" layoutX="23.0" layoutY="158.0" prefHeight="30.0" prefWidth="334.0" promptText="Kontakt">
+         <font>
+            <Font name="Candara Bold" size="18.0" />
+         </font>
+      </TextField>
+      <ButtonBar layoutX="157.0" layoutY="243.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#dodajKontakt" text="Dodaj">
+               <font>
+                  <Font name="Candara Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#closeMe" text="Otkazi">
+               <font>
+                  <Font name="Candara Bold" size="13.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+   </children>
+</Pane>

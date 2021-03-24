@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="581.0" styleClass="dialog" stylesheets="@../../Style/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Forms.KreirajTrkuControl">
+   <children>
+      <Label layoutX="45.0" layoutY="11.0" prefHeight="42.0" prefWidth="401.0" text="Kreiranje nove trke">
+         <font>
+            <Font name="Candara Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="naziv" layoutX="45.0" layoutY="71.0" prefHeight="35.0" prefWidth="494.0" promptText="Unesite naziv utrke">
+         <font>
+            <Font name="Candara Bold" size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="distanca" layoutX="45.0" layoutY="119.0" prefHeight="35.0" prefWidth="131.0" promptText="Distanca">
+         <font>
+            <Font name="Candara Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="datum" layoutX="189.0" layoutY="119.0" prefHeight="35.0" prefWidth="350.0" promptText="Datum/Vrijeme     dd/mm/yyyy hh:mm">
+         <font>
+            <Font name="Candara Bold" size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="aims" layoutX="45.0" layoutY="167.0" prefHeight="35.0" prefWidth="131.0" promptText="Broj AIMS Certtifikata">
+         <font>
+            <Font name="Candara Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="napomena" layoutX="189.0" layoutY="167.0" prefHeight="36.0" prefWidth="350.0" promptText="Napomena">
+         <font>
+            <Font name="Candara Bold" size="19.0" />
+         </font>
+      </TextField>
+      <ButtonBar layoutX="339.0" layoutY="273.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button fx:id="btnConfirm" mnemonicParsing="false" onAction="#addToDatabase" text="Potvrdi">
+               <font>
+                  <Font name="Candara Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#closeMe" text="Otkazi">
+               <font>
+                  <Font name="Candara Bold" size="13.0" />
+               </font>
+            </Button>
+        </buttons>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ButtonBar>
+      <TextField fx:id="tip" layoutX="45.0" layoutY="222.0" prefHeight="35.0" prefWidth="131.0" promptText="Tip trke">
+         <font>
+            <Font name="Candara Bold" size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>
